@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/java/org/scoula/jdbc_ex/common/JDBCUtil.java;C:/workspace/05_DB/01_MySQL/jdbc_ex/src/main/java/org/scoula/jdbc_ex/temp/Calculator.java;C:/workspace/05_DB/01_MySQL/jdbc_ex/src/test/java/org/scoula/jdbc_ex/test/CalculatorTest.java;C:/workspace/05_DB/01_MySQL/jdbc_ex/src/test/java/org/scoula/jdbc_ex/test/JUnitCycleTest.java;C:/workspace/05_DB/01_MySQL/jdbc_ex/src/test/java/org/scoula/jdbc_ex/test/JUnitTest.java;C:/workspace/05_DB/01_MySQL/jdbc_ex/src/test/java/org/scoula/jdbc_ex/ConnectionTest.java" />
+  </component>
+</project>
