@@ -1,5 +1,6 @@
 package org.edu.member.service;
 
+import org.edu.member.dao.KetMemberDaoImpl;
 import org.edu.member.dao.MemberDao;
 import org.edu.member.dao.MemberDaoImpl;
 import org.edu.member.vo.Member;
@@ -11,7 +12,8 @@ public class MemberService {
 
     private Scanner sc = new Scanner(System.in);
 
-    private MemberDao dao = new MemberDaoImpl();
+    //private MemberDao dao = new MemberDaoImpl();
+    private MemberDao dao = new KetMemberDaoImpl();
 
     public void displayMenu() {
 
