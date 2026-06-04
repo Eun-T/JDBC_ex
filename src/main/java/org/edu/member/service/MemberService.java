@@ -40,16 +40,16 @@ public class MemberService {
                         create();
                         break;
                     case 2:
-                        //getList();
+                        getList();
                         break;
                     case 3:
-                        //get();
+                        get();
                         break;
                     case 4:
                         update();
                         break;
                     case 5:
-                        //delete();
+                        delete();
                         break;
 
                     case 0:
@@ -118,6 +118,34 @@ public class MemberService {
         String role = sc.nextLine();
 
         int result = dao.update(index,name,role);
+    }
 
+    private void delete() throws SQLException {
+        System.out.println("=== 회원 정보 삭제 ===");
+
+        System.out.println("이름을 입력하세요: ");
+        String name = sc.nextLine();
+
+        Member member = new Member();
+        member.setMemberName(name);
+        int result = dao.delete(member);
+    }
+
+    private void getList() throws SQLException {
+        System.out.println("=== 회원 정보 전체 리스트 ===");
+
+        dao.getList();
+    }
+
+    private void get() throws SQLException {
+
+        System.out.println("=== 회원 정보 리스트 ===");
+
+        System.out.println("이름을 입력하세요: ");
+        String name = sc.nextLine();
+
+        Member member = new Member(name);
+
+        dao.get(member);
     }
 }

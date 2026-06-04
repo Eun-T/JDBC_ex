@@ -16,4 +16,7 @@ public class Member {
     private String memberRole;
     private char deletedYn;
 
+    public Member(String memberName) {
+        this.memberName = memberName;
+    }
 }

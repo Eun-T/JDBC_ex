@@ -5,6 +5,7 @@ import org.edu.member.vo.Member;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class KetMemberDaoImpl implements MemberDao {
@@ -49,4 +50,54 @@ public class KetMemberDaoImpl implements MemberDao {
             return result;
         }
     }
+
+    @Override
+    public int delete(Member member) throws SQLException {
+        String sql = "delete from members where name = ?";
+
+        try(PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, member.getMemberName());
+
+            int result = pstmt.executeUpdate();
+
+            if (result > 0) conn.commit();
+
+            return result;
+        }
+    }
+
+    @Override
+    public void getList() throws SQLException {
+        String sql = "select * from members";
+
+        try(PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()){
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                String role = rs.getString("role");
+
+                System.out.println(id + name + role);
+            }
+        }
+    }
+
+    @Override
+    public void get(Member member) throws SQLException {
+        String sql = "select * from members where name = ?";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, member.getMemberName());
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                String role = rs.getString("role");
+
+                System.out.println(id + name + role);
+            }
+        }
+    }
+
+
 }

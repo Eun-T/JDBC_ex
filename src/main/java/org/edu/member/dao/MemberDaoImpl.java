@@ -50,4 +50,20 @@ public class MemberDaoImpl implements MemberDao {
             return result;
         }
     }
+
+    @Override
+    public int delete(Member member) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public void getList() throws SQLException {
+    }
+
+    @Override
+    public void get(Member member) throws SQLException {
+
+    }
+
+
 }

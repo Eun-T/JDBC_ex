@@ -11,4 +11,10 @@ public interface MemberDao {
     int create(Member member) throws SQLException;
 
     int update(String index,String name,String role) throws SQLException;
+
+    int delete(Member member) throws SQLException;
+
+    void getList() throws SQLException;
+
+    void get(Member member) throws SQLException ;
 }
